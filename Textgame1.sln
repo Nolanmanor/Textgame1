@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Textgame1", "Textgame1\Textgame1.csproj", "{629DC1EC-8DA5-4744-83FB-10B383AC2718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{7EB13249-D717-4D3E-9B11-34A5F6851C2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{629DC1EC-8DA5-4744-83FB-10B383AC2718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629DC1EC-8DA5-4744-83FB-10B383AC2718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629DC1EC-8DA5-4744-83FB-10B383AC2718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629DC1EC-8DA5-4744-83FB-10B383AC2718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB13249-D717-4D3E-9B11-34A5F6851C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB13249-D717-4D3E-9B11-34A5F6851C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB13249-D717-4D3E-9B11-34A5F6851C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB13249-D717-4D3E-9B11-34A5F6851C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {132E6916-BFF7-4B70-88DB-C634C694639B}
+	EndGlobalSection
+EndGlobal
