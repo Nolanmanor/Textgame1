@@ -16,5 +16,16 @@ namespace Textgame1
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            lblGold.Text = "123";
+               
+        }
     }
 }
