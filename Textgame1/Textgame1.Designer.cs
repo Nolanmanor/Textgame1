@@ -61,7 +61,6 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hit Points:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -95,36 +94,32 @@
             this.lblHitPoints.AutoSize = true;
             this.lblHitPoints.Location = new System.Drawing.Point(110, 19);
             this.lblHitPoints.Name = "lblHitPoints";
-            this.lblHitPoints.Size = new System.Drawing.Size(35, 13);
+            this.lblHitPoints.Size = new System.Drawing.Size(0, 13);
             this.lblHitPoints.TabIndex = 4;
-            this.lblHitPoints.Text = "label5";
             // 
             // lblGold
             // 
             this.lblGold.AutoSize = true;
             this.lblGold.Location = new System.Drawing.Point(110, 45);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(35, 13);
+            this.lblGold.Size = new System.Drawing.Size(0, 13);
             this.lblGold.TabIndex = 5;
-            this.lblGold.Text = "label5";
             // 
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
             this.lblExperience.Location = new System.Drawing.Point(110, 73);
             this.lblExperience.Name = "lblExperience";
-            this.lblExperience.Size = new System.Drawing.Size(35, 13);
+            this.lblExperience.Size = new System.Drawing.Size(0, 13);
             this.lblExperience.TabIndex = 6;
-            this.lblExperience.Text = "label5";
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
             this.lblLevel.Location = new System.Drawing.Point(110, 99);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(35, 13);
+            this.lblLevel.Size = new System.Drawing.Size(0, 13);
             this.lblLevel.TabIndex = 7;
-            this.lblLevel.Text = "label5";
             // 
             // label5
             // 
@@ -289,7 +284,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Textgame";
             this.Text = "My Game";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
             this.ResumeLayout(false);

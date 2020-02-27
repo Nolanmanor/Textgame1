@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class RandomNumberGenerator
-    {
+     
+    
         public static class RandomNumberGenerator
         {
-            private static Random _generator = Random();
-            publicstatic int NumberBetween(int minimumValue, int maximumValue)
+            private static Random _generator = new Random();
+            public static int NumberBetween(int minimumValue, int maximumValue)
             {
                 return _generator.Next(minimumValue, maximumValue + 1);
             }
         }
-    }
+  
 }
