@@ -25,7 +25,7 @@ namespace Textgame1
             location.Name = "Home";
             location.Description = "This is your house.";
 
-            _player = new Player();
+            _player = new Player(10, 10, 20, 0, 1);
 
             _player.CurrentHitPoints = 10;
             _player.MaximumHitPoints = 10;
