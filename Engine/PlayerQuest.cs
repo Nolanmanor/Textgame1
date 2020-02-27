@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class InventoryItem
+    public class PlayerQuest
     {
-        public Item Details { get; set; }
-        public int Quantity { get; set; }
+        public Quest Details { get; set; }
+        public bool IsCompleted { get; set; }
 
-        public InventoryItem(Item details, int quantity)
+        public PlayerQuest(Quest details)
         {
             Details = details;
-            Quantity = quantity;
+            IsCompleted = false;
         }
     }
 }

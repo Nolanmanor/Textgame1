@@ -11,5 +11,12 @@ namespace Engine
         public Item Details { get; set; }
         public int DropPercentage { get; set; }
         public bool IsdefaultItem { get; set; }
+
+        public LootItem(Item details, int dropPercentage, bool isDefaultItem)
+        {
+            Details = details;
+            DropPercentage = dropPercentage;
+            IsdefaultItem = isDefaultItem;
+        }
     }
 }
