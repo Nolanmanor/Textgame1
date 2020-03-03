@@ -235,6 +235,11 @@ namespace Textgame1
             }
         }
 
+        private void btnTrade_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void UpdateWeaponListInUI()
         {
             List<Weapon> weapons = new List<Weapon>();
