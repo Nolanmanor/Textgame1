@@ -31,9 +31,12 @@ namespace Textgame1
                 _player = Player.CreateDefaultPlayer();
             }
 
-            MoveTo(_player.CurrentLocation);
+            lblHitPoints.DataBindings.Add("Text", _player, "CurrentHitPoints");
+            lblGold.DataBindings.Add("Text", _player, "Gold");
+            lblExperience.DataBindings.Add("Text", _player, "ExperiencePoints");
+            lblLevel.DataBindings.Add("Text", _player, "Level");
 
-            UpdatePlayerStats();
+            MoveTo(_player.CurrentLocation);
         }
 
         private void btnNorth_Click(object sender, EventArgs e)
@@ -141,6 +144,7 @@ namespace Textgame1
                         if (qci.Quantity == 1)
                         {
                             rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.Name + Environment.NewLine;
+                            
                         }
                         else
                         {
@@ -237,7 +241,10 @@ namespace Textgame1
 
         private void btnTrade_Click(object sender, EventArgs e)
         {
-
+            TradingScreen tradingScreen = new TradingScreen();
+            tradingScreen.StartPosition = FormStartPosition.CenterParent;
+            tradingScreen.CurrentPlayer = _player;
+            tradingScreen.ShowDialog(this);
         }
 
         private void UpdateWeaponListInUI()
