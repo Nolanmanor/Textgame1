@@ -454,5 +454,13 @@ namespace Textgame1
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
         }
+
+        private void rtbMessages_TextChanged(object sender, EventArgs e)
+        {
+            rtbMessages.SelectionStart = rtbMessages.Text.Length;
+            rtbMessages.ScrollToCaret();
+
+        }
     }
+
 }
