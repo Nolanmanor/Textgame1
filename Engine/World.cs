@@ -38,6 +38,7 @@ namespace Engine
 
         public const int ITEM_ID_ADVENTURER_PASS = 10;
 
+        public const int ITEM_ID_GOLDEN_KEY = 11;
 
 
         public const int MONSTER_ID_RAT = 1;
@@ -52,6 +53,7 @@ namespace Engine
 
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
 
+        public const int QUEST_ID_KILL_THE_SPIDER = 3;
 
 
         public const int LOCATION_ID_HOME = 1;
@@ -72,6 +74,7 @@ namespace Engine
 
         public const int LOCATION_ID_SPIDER_FIELD = 9;
 
+        public const int LOCATION_ID_SECRET = 10;
 
         public const int UNSELLABLE_ITEM_PRICE = -1;
 
@@ -107,8 +110,8 @@ namespace Engine
                 Items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5, 3));
                 Items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 1));
                 Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 1));
-            Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes", UNSELLABLE_ITEM_PRICE));
-
+                Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes", UNSELLABLE_ITEM_PRICE));
+                Items.Add(new Item(ITEM_ID_GOLDEN_KEY, "Golden Key", "Golden Keys", 1));
 
         }
 
@@ -156,6 +159,19 @@ namespace Engine
 
         {
 
+            Quest killTheSpider =
+
+                new Quest(
+                    QUEST_ID_KILL_THE_SPIDER,
+
+                    "Kill The Spider",
+                    "kill the spider and you will receive a golden key.", 20, 30);
+
+            killTheSpider.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SPIDER_FANG), 1));
+
+            killTheSpider.RewardItem = ItemByID(ITEM_ID_GOLDEN_KEY);
+
+
             Quest clearAlchemistGarden =
 
                 new Quest(
@@ -190,15 +206,17 @@ namespace Engine
 
             clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
 
-
+            
 
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
-
+            
 
             Quests.Add(clearAlchemistGarden);
 
             Quests.Add(clearFarmersField);
+
+            Quests.Add(killTheSpider);
 
         }
 
@@ -254,9 +272,14 @@ namespace Engine
 
             Location bridge = new Location(LOCATION_ID_BRIDGE, "Bridge", "A stone bridge crosses a wide river.");
 
+            bridge.QuestAvailableHere = QuestByID(QUEST_ID_KILL_THE_SPIDER);
+
+
+            Location secretRoom = new Location(LOCATION_ID_SECRET, "Secret", "You found the secret room!", ItemByID(ITEM_ID_GOLDEN_KEY));
 
 
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
+            
 
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
@@ -265,6 +288,10 @@ namespace Engine
             // Link the locations together
 
             home.LocationToNorth = townSquare;
+            home.LocationToSouth = secretRoom;
+
+
+            secretRoom.LocationToNorth = home;
 
 
 
@@ -334,6 +361,7 @@ namespace Engine
 
             Locations.Add(spiderField);
 
+            Locations.Add(secretRoom);
 
 
         }
