@@ -11,6 +11,7 @@ namespace Engine
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public bool Secret { get; set; }
 
         public Location(int id, string name, string description)
         {
@@ -27,6 +28,7 @@ namespace Engine
         public Location LocationToSouth { get; set; }
         public Location LocationToWest { get; set; }
         public Vendor VendorWorkingHere { get; set; }
+       
 
 
 
@@ -40,7 +42,16 @@ namespace Engine
             MonsterLivingHere = monsterLivingHere;
         }
 
-        
+        public bool IsVisible(Player player)
+        {
+            if (!player.HasRequiredItemToEnterThisLocation(this) && Secret)
+            {
+                return false;
+            }
+            
+
+            return true;
+        }
 
         
     }

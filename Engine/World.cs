@@ -277,6 +277,7 @@ namespace Engine
 
             Location secretRoom = new Location(LOCATION_ID_SECRET, "Secret", "You found the secret room!", ItemByID(ITEM_ID_GOLDEN_KEY));
 
+            secretRoom.Secret = true;
 
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             
